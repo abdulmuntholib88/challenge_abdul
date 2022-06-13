@@ -24,28 +24,28 @@ class OnBoardLoginFragment : Fragment() {
         etName = view.findViewById(R.id.et_name)
 
         etName.addTextChangedListener {
-            // step 6 kirim data dari fragment ke activity, kirim datanya dengan panggil method
+
             listener?.afterUserInputName(it.toString())
         }
 
 
-        // Inflate the layout for this fragment
+
         return view
     }
 
-    // step 2 kirim data dari fragment ke activity, bikin variable interface fragment
+
     var listener: UserNameInputListener? = null
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        // step 5 kirim data dari fragment ke activity, init variable listener
+
         if (context is UserNameInputListener) {
             listener = context
         }
     }
 
-    // step 1 kirim data dari fragment ke activity, bikin interface di fragment
+
     interface UserNameInputListener {
         fun afterUserInputName(input: String)
     }

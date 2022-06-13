@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity(), OnBoardLoginFragment.UserNameInputList
             }
 
             if(currentIndex == 0) {
-                // step 6 kirim data dari activity ke fragment, panggil method dan kirim data sesuai yg dibutuhkan
+
                 listener?.onDataSend("data from activity")
             }
         }
@@ -82,16 +82,16 @@ class MainActivity : AppCompatActivity(), OnBoardLoginFragment.UserNameInputList
 
     }
 
-    // step 4 kirim data dari fragment ke activity, override method interfacenya
+
     override fun afterUserInputName(input: String) {
         if(input.isNotEmpty()) imgNext.visibility = View.VISIBLE else imgNext.visibility = View.GONE
         namaUser = input
     }
 
-    // step 2 data dari activity ke fragment. bikin variable di activity
+
     var listener: OnSendDataToFragment? = null
 
-    // step 1 kirim data dari activity ke fragment, bikin interface di activity
+
     interface OnSendDataToFragment {
         fun onDataSend(input: String)
     }

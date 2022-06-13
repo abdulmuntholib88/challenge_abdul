@@ -15,6 +15,7 @@ class OnBoardImageOneFragment : Fragment(), MainActivity.OnSendDataToFragment {
         super.onCreate(savedInstanceState)
 
 
+
         (activity as MainActivity).listener = this
 
     }

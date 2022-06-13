@@ -36,8 +36,7 @@ class Game: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_game)
 
-        // plus point karna hapus <ImageView> di deklarasinya, kemaren di contoh masih ada.
-        // bisa maksimalin hint dari IDE nya
+
         handRock1 = findViewById(R.id.iv_rock_p1)
         handPaper1 = findViewById(R.id.iv_paper_p1)
         handScissor1 = findViewById(R.id.iv_scissor_p1)
@@ -59,19 +58,13 @@ class Game: AppCompatActivity() {
         }
 
         closeImage.setOnClickListener {
-            // untuk mem finish activity yang sedang aktif
             finish()
-
-            // alternatif bisa pakai, untuk mensimulasikan tombol back
             onBackPressed()
         }
     }
 
     private fun setOnClick(view: ImageView, idView: Int) {
-        // plus point buat ini
-        // dengan di bikin central di 1 method, codingan lebih rapi dan mudah di baca
         view.setOnClickListener {
-
             isHandEnabled(false)
             setPlayer1(view, idView)
             setPlayer2()
@@ -80,7 +73,6 @@ class Game: AppCompatActivity() {
     }
 
     private fun isHandEnabled(enable: Boolean) {
-        // plus point buat disable viewnya, tp lebih bagus kalau namanya diganti setHandEnabled()
         handRock1.isEnabled = enable
         handPaper1.isEnabled = enable
         handScissor1.isEnabled = enable
