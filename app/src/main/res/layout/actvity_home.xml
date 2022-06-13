@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/layout_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="SELAMAT DATANG DI GAME SUIT NEXT"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/iv_single"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_landing_page1"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_single"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player vs Player"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_single"
+        app:layout_constraintStart_toStartOf="@+id/iv_single"
+        app:layout_constraintTop_toBottomOf="@+id/iv_single" />
+
+    <ImageView
+        android:id="@+id/iv_cpu"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/ic_landing_page2"
+        app:layout_constraintEnd_toEndOf="@+id/tv_single"
+        app:layout_constraintStart_toStartOf="@+id/tv_single"
+        app:layout_constraintTop_toBottomOf="@+id/tv_single" />
+
+    <TextView
+        android:id="@+id/tv_cpu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player vs Komputer"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/iv_cpu"
+        app:layout_constraintStart_toStartOf="@+id/iv_cpu"
+        app:layout_constraintTop_toBottomOf="@+id/iv_cpu" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
